@@ -1,17 +1,17 @@
 # Center
 
-This tool centers the text output on stdout to the center of the opened terminal.
+This tool centres the text output on stdout to the centre of the opened terminal.
 
 ```bash
-  This command will take input from pipe (stdout) and will center that data in terminal
+  This command will take input from pipe (stdout) and will centre that data in terminal
 
 flags:
     -h, --help: show this help
-    -a, --all: will center every line individually (Horizontal center)
+    -a, --all: will centre every line individually (Horizontal centre)
 
 usage:
-    command | center-align
-    command | center-align -a
+    command | centre
+    command | centre -a
 ```
 
 ## Installation
@@ -20,20 +20,9 @@ usage:
 sudo make install
 ```
 
-### AUR
-```
-yay -S center-align
-```
-[AUR](https://aur.archlinux.org/packages/center-align)
-
 ## Uninstall
 ```
 sudo make uninstall
-```
-
-### AUR
-```
-yay -Rns center-align
 ```
 
 # Check
@@ -41,12 +30,7 @@ yay -Rns center-align
 
 Fun Command to give a try:
 ```
-watch -n1 -t "date +%A%n%x%n%X | figlet  | center-align -a"
+watch -n1 -t "date +%A%n%x%n%X | figlet  | centre -a"
 ```
 ![image](https://user-images.githubusercontent.com/60490474/232287938-a7e18d34-4f39-4f0c-bdde-0f30baa920eb.png)
 
-
-
-## TODO
-
-- [ ] Flags to specific center Type (vertical or horizontal)

@@ -60,15 +60,15 @@ getMaxlen() {
 
 help() {
 	cat <<EOF
-  This command will take input from pipe (stdout) and will center that data in terminal
+  This command will take input from pipe (stdout) and will centre that data in terminal
 
 flags:
     -h, --help: show this help
-    -a, --all: will center every line individually (Horizontal center)
+    -a, --all: will centre every line individually (Horizontal center)
 
 usage:
-    command | center-align
-    command | center-align -a
+    command | centre
+    command | centre -a
 
 EOF
 }
