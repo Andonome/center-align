@@ -35,8 +35,9 @@ main() {
 		left_padding=$(((totalhLen - hlen) / 2))
 	}
 	upper_padding=$(((totalvLen - vlen) / 2))
-
-	yes '' | sed "$upper_padding"q
+	# if upper padding is negative, sed gets confused
+	[ "$upper_padding" -lt 1 ] && upper_padding=1
+	yes '' 2>/dev/null | sed "$upper_padding"q
 	for i in "${content[@]}"; do
 		$all && {
 			hlen="${#i}"
@@ -45,7 +46,7 @@ main() {
 		printf " %.0s" $(seq 1 "$left_padding")
 		printf "%s\n" "$i"
 	done
-	yes '' | sed "$upper_padding"q
+	yes '' 2>/dev/null | sed "$upper_padding"q
 
 }
 getMaxlen() {
